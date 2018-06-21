@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-class ExampleController extends Controller
+class CarrosController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -14,9 +14,10 @@ class ExampleController extends Controller
 
     }
 
-    public function testAction()
+    public function list()
     {
-        echo __METHOD__;
+        $carros = ['Peugeot 207','Citroen C3', 'Fiat Punto'];
+        return json_encode($carros);
     }
 
     //

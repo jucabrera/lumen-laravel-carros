@@ -99,4 +99,12 @@ $app->router->group([
     require __DIR__.'/../routes/web.php';
 });
 
+$app->middleware([
+    App\Http\Middleware\ExampleMiddleware::class
+]);
+//
+//$app->routeMiddleware([
+//    'auth' => App\Http\Middleware\ExampleMiddleware::class,
+//]);
+
 return $app;
