@@ -17,4 +17,11 @@ $router->get('/', function () use ($router) {
 
 
 $router->get('/carros', 'CarrosController@list');
+$router->get('/carros/{id}', 'CarrosController@get');
+
+$router->put('/carros/{id}', 'CarrosController@update');
+$router->delete('/carros/{id}', 'CarrosController@delete');
+
+$router->post('/carros', 'CarrosController@insert');
+
 
